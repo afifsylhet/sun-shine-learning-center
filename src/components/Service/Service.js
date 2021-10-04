@@ -1,10 +1,10 @@
 import React from 'react';
 import Rating from 'react-rating';
-import './HomeCourse.css'
+import '../HomeCourse/HomeCourse.css';
 import { NavLink } from 'react-router-dom';
 
 
-const HomeCourse = (props) => {
+const Service = (props) => {
     const { title, price, ratings, duration, lacture, courseImg, author } = props.course;
     // console.log(props.course)
     return (
@@ -37,4 +37,4 @@ const HomeCourse = (props) => {
     );
 }
 
-export default HomeCourse;
+export default Service;

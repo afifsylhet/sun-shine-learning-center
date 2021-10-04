@@ -1,30 +1,33 @@
 import React from 'react';
-import { Container, Nav, Navbar, Button } from 'react-bootstrap';
+import { Container, Nav, Navbar, Button, NavDropdown, Form, FormControl } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import "./Header.css"
+
+
+
 
 const Header = () => {
     return (
-        <div>
-            <Navbar bg="dark" variant="dark">
-                <Container>
-                    <Navbar.Brand href="#home" className="nav-style">Sun Shine</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="ms-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
-                            <Nav.Link href="#about">About</Nav.Link>
-                            <Nav.Link href="#services">Services</Nav.Link>
-                            <Nav.Link href="#teachers">Teacher's</Nav.Link>
-                            <Nav.Link href="#contact">Contact Us</Nav.Link>
-
-                            <Button variant="outline-light" className="ms-5">Sign In</Button>
-
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-        </div>
-    );
+        <Navbar bg="dark" expand="lg">
+            <Container fluid>
+                <Navbar.Brand className="text-white">Sun Shine</Navbar.Brand>
+                <Navbar.Toggle aria-controls="navbarScroll" />
+                <Navbar.Collapse id="navbarScroll">
+                    <Nav
+                        className="ms-auto my-2 my-lg-0 nav-style px-4"
+                        style={{ maxHeight: '100px' }}
+                        navbarScroll>
+                        <NavLink to="/home" className="nav-style"> Home </NavLink>
+                        <NavLink to="/about" className="nav-style"> About Us </NavLink>
+                        <NavLink to="/services" className="nav-style"> Services </NavLink>
+                        <NavLink to="/contact" className="nav-style"> Contact Us </NavLink>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+    )
 };
+
+
 
 export default Header;
