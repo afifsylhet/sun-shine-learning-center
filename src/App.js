@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button, Col } from 'react-bootstrap';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Home from './components/Home/Home';
+import HomeCourses from './components/HomeCourses/HomeCourses';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> "Hello World", From Bangladesh.
-        </p>
-        <h1> Hello From Bangladesh! </h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header></Header>
+      <Home></Home>
+      <HomeCourses></HomeCourses>
+      <Footer></Footer>
+
     </div>
   );
 }
